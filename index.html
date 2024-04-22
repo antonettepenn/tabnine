@@ -10,6 +10,21 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #To address the accessibility issues identified by the accessibility tools, we need to ensure that all input elements in the form have associated label elements. This not only helps with accessibility but also improves the form's usability, especially for users relying on screen readers. Here's the updated code with corrections:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See World With Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
             background-color: #f4f4f4;
         }
         .header {
@@ -77,6 +92,10 @@
             color: #fff;
             cursor: pointer;
         }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -104,9 +123,15 @@
     <div class="form-section">
         <h2>Book Your Trip</h2>
         <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="date">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Your Name">
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Your Email">
+            
+            <label for="date">Travel Date</label>
+            <input type="date" id="date">
+            
             <button type="submit">Submit</button>
         </form>
     </div>
